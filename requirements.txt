@@ -1,0 +1,7 @@
+# Tools used in the CI pipeline: tests, lint, building the artifact.
+# The app's RUNTIME dependencies (fastapi, uvicorn) live in pyproject.toml
+# and are installed with `pip install .`
+pytest>=8.0
+httpx>=0.27
+ruff>=0.6
+build>=1.2

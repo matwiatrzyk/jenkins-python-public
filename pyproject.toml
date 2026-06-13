@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "python-ci-demo"
+version = "1.0.0"
+description = "Demo FastAPI app for the Jenkins CI/CD workshop"
+requires-python = ">=3.11"
+# RUNTIME dependencies (go into the wheel and into the app image via `pip install .`)
+dependencies = [
+    "fastapi>=0.115",
+    "uvicorn[standard]>=0.30",
+]
+
+[tool.setuptools.packages.find]
+include = ["app*"]
+
+[tool.ruff]
+line-length = 100
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
