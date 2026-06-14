@@ -4,7 +4,7 @@ from fastapi import FastAPI, HTTPException
 
 from app.logic import calculate_gross
 
-app = FaaastAPI(title="Python CI Demo", version="1.0.0")
+app = FastAPI(title="Python CI Demo", version="1.0.0")
 
 
 @app.get("/")
